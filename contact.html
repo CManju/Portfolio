@@ -1,0 +1,121 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+	 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title>My Portfolio</title>
+        <link href="style.css" type="text/css" rel="stylesheet"/>
+        <script src="https://maps.googleapis.com/maps/api/js"></script>
+		 <script>
+      function initialize() {
+        var mapCanvas = document.getElementById('mapcanvas');
+		var mylatlng = {lat: 12.967562, lng: 77.755144};
+        var mapOptions = {
+          center: new google.maps.LatLng(12.967562, 77.755144),
+          zoom: 16,
+		  scrollWhell: false,
+          mapTypeId: google.maps.MapTypeId.ROADMAP
+        }
+        var map = new google.maps.Map(mapCanvas, mapOptions);
+		//create a marker and set its position
+		var marker1 = new google.maps.Marker({
+		map: map,
+		position: mylatlng,
+		title: 'My residence'
+		});
+      }
+      google.maps.event.addDomListener(window, 'load', initialize);
+	  </script>
+	<script>		
+	  function sendMail()
+	  {
+		var link = 'mailto:manjusha.chitra@gmail.com?subject=Message from ' + document.getElementById('email-id').value + '&body'= '+document.getElementById('email-id').value;
+		Window.location.href = link;
+		}
+		
+	</script>
+</head>
+<body>
+			
+			<header>
+		    <div class="inner_header">
+            <div class="logo">
+				<a href="index1.html"><img src="Images/logo.png" alt="logo"/>
+		     	      <p>Manjusha Chitra</p></a>
+
+            </div>
+            <ul id="social_logo">
+     		    <li><img src="Images/rss.png" id="button"/></li>
+                <li><img src="Images/facebook.png" id="button"/></li>
+                <li><img src="Images/linkedin.png" id="button"/></li>
+                <li><img src="Images/twitter.png" id="button"/></li>
+                <li><img src="Images/flickr.png" id="button"/></li>
+                
+   			  
+              </ul>
+             <div id="menu">
+             	<ul>
+                	<ul>
+                	  <li><a href="index1.html">Home</a></li>
+                	  <li><a href="about.html">About</a></li>
+                	  <li><a href="portfolio.html">Portfolio</a></li>
+                	  <li><a href="contact.html">Contact </a></li>
+              	  </ul>
+                </ul>
+             
+             </div>
+            </div>
+            </header>	
+            
+           	<div class="inner_header">
+                	<div class="pages-banner">
+                    	<p>Want to Hire Me....</p>
+                      </div>                        
+					<div id="mapcanvas"></div>
+                <div class="contact_right"><!---Input form starts here-->
+                	<h2>Send a message</h2>
+					<form action=" " method="post">
+						<div class="form-input">
+                            <div class="input-row">
+                                <label>Name: * </label>
+                                <input type="text" class="text-input" name="" id="name" required/>
+                              </div>
+                              <div class="input-row">
+                          			<label>Email: *</label>
+                            	<input type="email" class="text-input" name="" id="email-id" required/>            
+                          	</div>
+                            <div class="input-row">
+                           	<label>Phone: *</label>
+                            <input type="text" class="text-input" name="" id="phone" required/>
+                            </div>
+                            <div class="input-row">
+                            	<label>Website: *</label>
+                                <input type="text" class="text-input" name="" id="website" required/>
+                              </div>
+                              <div class="input-row">
+                              	<label>Message: *</label>
+                                <textarea class="input-txtarea"  name="" id="message" required></textarea>
+                                </div>
+                                <input type="submit" class="form-submit" value="Send" onclick="sendMail(); return false" />
+                             </div>
+					</form>
+                       </div><!---form ends here-->
+                       
+                    </div>
+                    <div class="clear">
+                    </div>
+					
+                    
+                
+                	
+             <div class="footer">
+							<p>&copy Copyrights 2016 Manjusha Chitra.All rights reserved.</p>
+						
+						
+						</div>
+   
+
+           
+
+</body>
+
+</html>
